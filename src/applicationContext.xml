@@ -6,6 +6,8 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context:property-placeholder location="classpath:sport.properties"/>
 
     <!-- Define your beans here -->
     <bean id="myLoggerConfig" class="com.advnet.springdemo.MyLoggerConfig" init-method="initLogger">
@@ -23,8 +25,10 @@
     
     <bean id="myCoach" class="com.advnet.springdemo.KarateCoach">
     	<property name="fortuneService" ref="myFortune"></property>
-    	<property name="emailAddress" value="tjanach@wp.pl"></property>
-    	<property name="team" value="advnet"></property>
+<!--     	<property name="emailAddress" value="tjanach@wp.pl"></property> -->
+<!--     	<property name="team" value="advnet"></property> -->
+    	<property name="emailAddress" value="${dada.email}"></property>
+    	<property name="team" value="${dada.team}"></property>
     	
     </bean>
     
