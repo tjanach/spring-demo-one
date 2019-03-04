@@ -23,6 +23,9 @@
     
     <bean id="myCoach" class="com.advnet.springdemo.KarateCoach">
     	<property name="fortuneService" ref="myFortune"></property>
+    	<property name="emailAddress" value="tjanach@wp.pl"></property>
+    	<property name="team" value="advnet"></property>
+    	
     </bean>
     
     
